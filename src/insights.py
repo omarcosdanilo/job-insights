@@ -35,7 +35,7 @@ def get_unique_industries(path):
     file_read = read(path)
 
     for job in file_read:
-        if job['industry'] not in industries:
+        if job['industry'] not in industries and job['industry'] != '':
             industries.append(job['industry'])
 
     return industries
